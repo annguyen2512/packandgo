@@ -1,11 +1,8 @@
 <?php 
 require_once("config.php");
-//if((isset($_POST['your_name'])&& $_POST['your_name'] !='') && (isset($_POST['your_email'])&& $_POST['your_email'] !=''))
-//{
-// require_once("contact_mail.php<strong>");
-//</strong>
-
-echo "em là đồ mập địch thúi";
+if((isset($_POST['name'])&& $_POST['name'] !='') && (isset($_POST['email'])&& $_POST['email'] !='')&& (isset($_POST['feedback'])&& $_POST['feedback'] !=''))
+{
+ //require_once("contact_mail.php");
 
 $yourName = $conn->real_escape_string($_POST['name']);
 $yourEmail = $conn->real_escape_string($_POST['email']);
@@ -22,8 +19,8 @@ else
 {
     echo "Thank you! We will contact you soon";
 }
-//else
-//{
-//echo "Please fill Name and Email";
-//}
+}else
+{
+	echo "Please fill Name and Email";
+}
 ?>
