@@ -8,9 +8,9 @@ $yourName = $conn->real_escape_string($_POST['name']);
 $yourEmail = $conn->real_escape_string($_POST['email']);
 $comments = $conn->real_escape_string($_POST['feedback']);
 $source = $conn->real_escape_string($_POST['find-us']);
-//$news = $conn->real_escape_string($_POST['news']);
+$news = $conn->real_escape_string($_POST['news']);
 
-$sql="INSERT INTO customer_feedback (name, email, feedback, source) VALUES ('".$yourName."','".$yourEmail."', '".$comments."', '".$source."')";
+$sql="INSERT INTO customer_feedback (name, email, feedback, source, newsletter) VALUES ('".$yourName."','".$yourEmail."', '".$comments."', '".$source."', '".$news."')";
 
 
 if(!$result = $conn->query($sql)){
