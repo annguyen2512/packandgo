@@ -1,15 +1,16 @@
 <?php 
 require_once("config.php");
-if((isset($_POST['name'])&& $_POST['name'] !='') && (isset($_POST['email'])&& $_POST['email'] !='')&& (isset($_POST['feedback'])&& $_POST['feedback'] !=''))
+if((isset($_POST['name'])&& $_POST['name'] !='') && (isset($_POST['email'])&& $_POST['email'] !='')&& (isset($_POST['feedback'])&& $_POST['feedback'] !='') && (isset($_POST['find-us'])&& $_POST['find-us'] !=''))
 {
  //require_once("contact_mail.php");
 
 $yourName = $conn->real_escape_string($_POST['name']);
 $yourEmail = $conn->real_escape_string($_POST['email']);
 $comments = $conn->real_escape_string($_POST['feedback']);
-//$comments = $conn->real_escape_string($_POST['comments']);
+$source = $conn->real_escape_string($_POST['find-us']);
+//$news = $conn->real_escape_string($_POST['news']);
 
-$sql="INSERT INTO customer_feedback (name, email, feedback) VALUES ('".$yourName."','".$yourEmail."', '".$comments."')";
+$sql="INSERT INTO customer_feedback (name, email, feedback, source) VALUES ('".$yourName."','".$yourEmail."', '".$comments."', '".$source."')";
 
 
 if(!$result = $conn->query($sql)){
