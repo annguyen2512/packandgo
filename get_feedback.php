@@ -5,7 +5,7 @@ require_once("config.php");
 // require_once("contact_mail.php<strong>");
 //</strong>
 
-echo "connected";
+echo "em là đồ mập địch thúi";
 
 $yourName = $conn->real_escape_string($_POST['name']);
 $yourEmail = $conn->real_escape_string($_POST['email']);
