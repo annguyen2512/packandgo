@@ -1,18 +1,17 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 $host = "localhost";
 $userName = "root";
 $password = "";
 $dbName = "pack&go";
  
 // Create database connection
-$conn = new mysqli($host, $userName, $password , $dbName);
-// cách 2
-//$conn = new mysqli("localhost", "root", "" , "pack&go"); // nhưng ko ai xài cái kiểu nà
- 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} else{
-//    echo "connect được rồi đó";
+
+try{
+    $conn = new PDO('mysql:host=localhost;dbname=pack&go;charset=utf8', 'root', '',
+                        array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+    die('Error connecting to database');
 }
 ?>
