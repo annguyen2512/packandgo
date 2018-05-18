@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">    
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type ="text/css" href="vendors/css/normalize.css">
     <link rel="stylesheet" type ="text/css" href="vendors/css/ionicons.min.css">
     <link rel="stylesheet" type ="text/css" href="vendors/css/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type ="text/css" href="resource/css/style.css">
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <title>pack&ampgo</title>
  </head>
 <body>
     <header>
+       <nav class="sticky">
         <div class ="row">
             <img src="resource/css/img/logo1.jpg" alt="Pack&gologo" class ="logo">
             <ul class ="main-nav">
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Travel mate</a></li>
                 <li><a href="#">Our Places</a></li>
-                <li><a href="#">Sign up</a></li>
+                <li><a href="#register" onclick="document.getElementById('register').style.display='block'" style="width:auto;">Sign up</a>                </li>
+                <li><a href="#login" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</a>                </li>
             </ul>
-        </div> 
+        </div>
+        </nav> 
         <div class="hero-text-box">
             <h1>Just pack and go<br> Travel to meet yourself</h1>
             <a class="btn btn-full" href="#">Go now</a>
@@ -269,8 +272,77 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
         <div class="col span-2-of-3">
             <input type="submit" value="Send it">
         </div>
-    </div>   
+    </div>       
 </form>
 </section>
-</body>       
+
+<!-- reference: w3 school-->  
+    
+    <div id="register" class="registerform">
+<span onclick="document.getElementById('register').style.display='none'" class="close" title="Close">&times;</span>    
+        <form class="register-fom" action="/pack&go/register.php" method="post">
+ <div class="container">
+      <h3>Sign Up</h3>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="myInput" placeholder="Enter Password" name="password" required> 
+       
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" name="showpass" onclick="myFunction()">Show password
+      </label><br>
+          
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+        </form>
+       
+        
+    </div> 
+
+ <div id="login" class="loginform">
+<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>    
+        <form class="login-fom" action="/pack&go/register.php" method="post">
+ <div class="container">
+      <h3>Log in</h3>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="myInput" placeholder="Enter Password" name="password" required> 
+       
+      <label>
+        <input type="checkbox" name="remember" style="margin:15px auto"> Remember me
+      </label>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Login</button>
+      </div>
+      	<p> Not a member yet?								<a href="#register" onclick="document.getElementById('register').style.display='block'" style="width:auto;"  class="to_register">Sign up now</a>
+    </div>
+        </form>
+       
+        
+    </div> 
+<!-- google library-->      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- these scripts to enanble css 3.0 and html5 to browers with old versions-->
+<script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+
+<script src="resource/js/script.js"></script>
+</body> 
 </html>

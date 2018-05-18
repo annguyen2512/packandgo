@@ -13,7 +13,7 @@ font-weight:300;
 font-size:20px;
 text-rendering:optimizeLegibility;}
 
-.clearfix {zoom: 1}
+.clearfix {zoom:1}
 .clearfix:after{
     content: '.';
     clear:both;
@@ -103,7 +103,8 @@ h3{
 /* ---------------------------- */
 
 .btn:link,
-.btn:visited{
+.btn:visited,
+input[type=submit]{
     display:inline-block;
     padding:10px 30px;
     font-weight:300;
@@ -113,7 +114,8 @@ h3{
 }
    
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit]{
     background-color:#e67e22;
     color:whitesmoke;
     border: 1px solid #e67e22;
@@ -126,18 +128,26 @@ h3{
 color:#e67e22}
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
     background-color:#c95f00}
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active{
     border: 1px solid #c95f00;
 
 }
 .btn-ghost:hover,
-.btn-ghost:active
+.btn-ghost:active,
+input[type=submit]:hover,
+input[type=submit]:active
 {border: 1px solid #c95f00;
 color:whitesmoke}
+
+/*create button effect when click,visited, hover*/
 
 /* ---------------------------- */
 /* HEADER */
@@ -156,6 +166,8 @@ width:1140px;
 top:30%;
 left:50%;
 transform: translate(-50%,50%);}
+/*move object leftwards by 50% of my width, along the x-axis, and
+move object downward by 50% of my height, along the y-axis*/
 
 .logo {
     height:100px;
@@ -169,7 +181,7 @@ float:right;
 list-style: none;
 margin-top: 50px;
 }
-    
+/*inline-block: arrange objects in 1 line*/   
 .main-nav li {
     display:inline-block;
     margin-left:40px;
@@ -188,6 +200,8 @@ margin-top: 50px;
 .main-nav li a:active {
     border-bottom:2px solid #e67e22}
 }
+
+
 /* ---------------------------- */
 /* IMAGES
 /* ---------------------------- */
@@ -208,14 +222,14 @@ margin-top: 50px;
         overflow: hidden;
         background-color: #604d4d;
     }
-
+/*overflow hiden:hidden	The overflow is clipped, and the rest of the content will be invisible*/
 .travel-photo img {
     opacity:0.7;
     height:280px;
     width:100%;
     transition:transform 0.5s, opacity 0.5s;
     transform: scale (1.15);}
-
+/*The opacity-level describes the transparency-level, where 1 is not transparent at all, 0.5 is 50% see-through, and 0 is completely transparent.*/
 .travel-photo img:hover{
     opacity:1;
     transform: scale(1.03);
@@ -266,9 +280,9 @@ padding-left:3%;
 }
     
 .btn-app img {
-    height:60px; 
+    height:50px; 
     padding:5px;
-    margin-right:10px; margin-top:30px;}
+    margin-right:10px; margin-top:10px;}
 
 
 /* ---------------------------- */
@@ -281,10 +295,14 @@ padding-left:3%;
 /* TESTIMONIALS
 /* ------------------------------*/
 
+/*create linear background to highlight the text*/
+
 .section-testimonials {background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.49)),url(img/background%202.jpg);
 background-size:cover;
 color:whitesmoke;
 background-attachment: fixed;}
+
+/*create big blockquote*/
 
 blockquote{padding:2%;
 font-style:italic;
@@ -313,4 +331,131 @@ vertical-align: middle;}
 /* ---------------------------- */
 /* FORM
 /* ------------------------------*/
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width:70%;
+}
 
+textarea {height:150px;}
+    
+
+
+
+/* ---------------------------- */
+/* SIGNUP FORM
+/* ------------------------------*/
+.registerform,.loginform { display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 20%;
+    top: 20%;
+    width: 50%; /* Full width */
+    height: 70%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #ffffff;
+    padding-top: 50px;
+    text-align: left;
+    padding: 10px;
+    border:1px solid #004f93;
+}
+
+.registerform-content {
+    background-color: #fefefe;
+    margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #464343;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(230, 126, 34, 0.6);
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+.container input[type=email],
+.container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.container input[type=email]:focus, 
+.container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;}
+
+button {
+    background-color: #e67e22;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;}
+
+ button:hover {
+    opacity:1;
+}
+   
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: rgba(80, 103, 227, 0.97);}
+    
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+
+.sticky {
+    background-color: #eaf6ff;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited
+{ padding:8px 0;
+    color:#2f2f33;
+    
+}
+.sticky .main-nav{margin-top:10px;}
+
+.sticky .logo {height:50px;}
