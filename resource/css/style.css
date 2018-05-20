@@ -404,7 +404,9 @@ hr {
 }
 
 .container input[type=email],
-.container input[type=password] {
+.container input[type=password],
+.container input[type=text],
+.container select{
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -412,7 +414,9 @@ hr {
     border: none;
     background: #f1f1f1;
 }
-.container input[type=email]:focus, 
+.container input[type=email]:focus,
+.container input[type=text]:focus,
+.container select:focus,
 .container input[type=password]:focus {
     background-color: #ddd;
     outline: none;}
@@ -440,7 +444,7 @@ button {
   width: 50%;
 }
 
-
+/* STICKY NAVIGATION */
 
 .sticky {
     background-color: #eaf6ff;
