@@ -11,20 +11,11 @@ $(document).ready(function() {
     }, {
       offset: '60px;'
     });
-                  
-                                    
-                  
-{
 
 // Get the modal
-var modal = document.getElementById('register');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        register.style.display = "none";
-    }
-}
+var modal_register = document.getElementById('click-register');
+var modal_register_form = document.getElementById('register');
+var modal_register_again = document.getElementById('click-register-again');
 
 var check = function() {
   if (document.getElementById('mypass').value ==
@@ -37,22 +28,35 @@ var check = function() {
   }
 }
 
-var modal = document.getElementById('login');
+var modal = document.getElementById('click-login');
+var modal_form = document.getElementById('login');
+
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        register.style.display = "none";
+    console.log(event.target);
+    if (event.target == modal_register_again) {
+        modal_form.style.display='none';  
+        modal_register_form.style.display='block';
+        return;
     }
-}
-    
-function myFunction() {
-    var x = document.getElementById("mypass");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
+
+    if (event.target == modal_register){   
+        modal_register_form.style.display='block';       
+    }else{
+         if (!modal_register_form.contains(event.target)) {
+            modal_register_form.style.display='none';
+        }
     }
-}
-       
+
+    if (event.target == modal) {       
+        modal_form.style.display='block';
+    }else{
+        
+        if (!modal_form.contains(event.target)) {
+            modal_form.style.display='none';
+        }
+    }
+}     
 });

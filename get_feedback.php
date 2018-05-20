@@ -7,7 +7,6 @@ if((isset($_POST['name'])&& $_POST['name'] !='') && (isset($_POST['email'])&& $_
     $comments = $_POST['feedback'];
     $source = $_POST['find-us'];
     $news = $_POST['news'];
-    echo $yourName;
         try{
             //Khởi tạo Prepared Statement từ biến $conn ở phần trước
             $stmt = $conn->prepare('INSERT INTO customer_feedback (name, email, feedback, source, newsletter) VALUES (:yourName, :yourEmail, :comments, :source, :news)');
