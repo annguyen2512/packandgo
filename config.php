@@ -15,6 +15,4 @@ try{
     die('Error connecting to database');
 }
 
-$config['roles'] = array('subscriber', 'admin');
-$config['status'] = array('pending', 'approved');
 ?>

@@ -247,7 +247,7 @@ session_start();
 </section>   
     
 <section class="section-places">
- <h2>Hidden Beauties We Discovered </h2> 
+ <h2>Hidden GEMs We Discovered </h2> 
  <div class="row">
      
 <div class="col span-1-of-4 box">
@@ -680,8 +680,8 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
 
       <label for="psw"><b>Password</b></label>
       <input type="password" id="myInput" placeholder="Enter Password" name="password" required value=<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : "";  ?> > 
-       
-      <label>
+      
+       <label>
         <input type="checkbox" <?php if(isset($_COOKIE['email'])){
           echo " checked";
         } ?> name="remember" onclick="rememberUserFunction()" style="margin:15px auto"> Remember me

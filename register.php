@@ -26,8 +26,8 @@ if((isset($_POST['signup_name']) && $_POST['signup_name'] !='') && (isset($_POST
                 $result['email'] =  $yourEmail;
                 $result['country']= $yourCountry;
 
-                $res = json_encode(array('message'=>"Success","data"=>$result));
-                echo $res;
+                echo json_encode(array('message'=>"Success","data"=>$result));
+                // echo $res;
             }else{
                 echo json_encode(array('message'=>"Fail"));
             }

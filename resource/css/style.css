@@ -439,7 +439,7 @@ button {
    
 .cancelbtn {
     padding: 14px 20px;
-    background-color: rgba(80, 103, 227, 0.97);}
+    background-color: grey;}
     
 .cancelbtn, .signupbtn {
   float: left;
@@ -465,3 +465,6 @@ button {
 .sticky .main-nav{margin-top:10px;}
 
 .sticky .logo {height:50px;}
+
+.ui_header h1 {font-size: 300%;
+color: blue;}

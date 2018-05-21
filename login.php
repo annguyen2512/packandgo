@@ -30,8 +30,8 @@ if((isset($_POST['email'])&& $_POST['email'] !='') && (isset($_POST['password'])
                  $_SESSION['name'] = $result['name'];
                  $_SESSION['time_start_login'] = time();
                  
-                 $res = json_encode(array('message'=>"Success","data"=>$result));
-                 echo $res;
+                 echo json_encode(array('message'=>"Success","data"=>$result));
+                 // echo $res;
 
                  // Check remember                
                  if(isset($_POST['remember'])){
