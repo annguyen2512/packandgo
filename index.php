@@ -87,8 +87,8 @@ session_start();
                      $('.main-nav li:last').remove();
 
                      $( ".main-nav" ).append( " <li><a href='#'>Hello, " + obj.data.name + "</a></li>" );
-                     $( ".main-nav" ).append( "<li><a href='./logout.php'>Logout</a></li>" );
-                }else{
+                     $(".main-nav" ).append (" <li><a href='./logout.php'>Logout</a></li>");
+                   }else{
                   alert("Login Fail");
                 }
               
@@ -102,13 +102,13 @@ session_start();
 
  </head>
 <body>
-    <header>
+    <header id="firstpage">
        <nav>
         <div class ="row">
             <img src="resource/css/img/logo1.jpg" alt="Pack&gologo" class ="logo">
             <ul class ="main-nav">
                 <li><a href="#">About us</a></li>
-                <li><a href="#">Travel mate</a></li>
+                <li><a href="travelmate.html">Travel mate</a></li>
                 <li><a href="#">Our Places</a></li>
                   
                <?php

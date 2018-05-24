@@ -152,7 +152,7 @@ color:whitesmoke}
 /* ---------------------------- */
 /* HEADER */
 /* ---------------------------- */
-header 
+#firstpage
 {background-image: linear-gradient(rgba(0, 0, 0, 0.51),rgba(0, 0, 0, 0.51)),url(img/background.jpg);
 height:100vh;
 background-size:cover;
@@ -184,6 +184,7 @@ margin-top: 50px;
 }
 /*inline-block: arrange objects in 1 line*/   
 .main-nav li {
+    position: relative;
     display:inline-block;
     margin-left:20px;
 }
@@ -203,6 +204,15 @@ margin-top: 50px;
     border-bottom:2px solid #e67e22}
 }
 
+.main-nav li .sub-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.main-nav li.sub-nav {
+    display: block;
+}
 
 /* ---------------------------- */
 /* IMAGES
@@ -466,5 +476,16 @@ button {
 
 .sticky .logo {height:50px;}
 
-.ui_header h1 {font-size: 300%;
-color: blue;}
+
+/* TRAVEL MATE */
+/* TRAVEL MATE */
+
+#travelmate
+{background-image: linear-gradient(rgba(0, 0, 0, 0.51),rgba(0, 0, 0, 0.51)),url(img/background1.jpg);
+height:100vh;
+background-size:cover;
+background-position:center;
+background-attachment: fixed;} 
+
+.from-wrapper {background-color: #f6f6f6;
+	background-image: linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));}
