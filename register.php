@@ -9,12 +9,16 @@ if((isset($_POST['signup_name']) && $_POST['signup_name'] !='') && (isset($_POST
     $yourEmail = $_POST['email'];
     $yourCountry = $_POST['country'];
     $yourPassword = md5($_POST['password']);
-
+    $image_content = file_get_contents($_FILES["image"]["tmp_name"]);
+    $image_content = base64_encode($image_content);
+var_dump($image_content);
         try{
             //Khởi tạo Prepared Statement từ biến $conn ở phần trước
-            $stmt = $conn->prepare('INSERT INTO user (name, password, email, country) VALUES (:yourName, :yourPassword, :yourEmail, :yourCountry)');
+    
+            $stmt = $conn->prepare('INSERT INTO user (name, password, email, country, photo) VALUES (:yourName, :yourPassword, :yourEmail, :yourCountry,:image_content)');
+        
 
-            $stmt->execute((array(':yourName'=>$yourName,':yourPassword'=>$yourPassword,':yourEmail'=>$yourEmail,':yourCountry'=>$yourCountry)));
+            $stmt->execute((array(':yourName'=>$yourName,':yourPassword'=>$yourPassword,':yourEmail'=>$yourEmail,':yourCountry'=>$yourCountry,':image_content'=>$image_content)));
 
             if($stmt->rowCount() >= 1) {
                 // Save session

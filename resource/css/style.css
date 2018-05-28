@@ -98,6 +98,7 @@ h3{
     font-size:85%;
     line-height:145%;
 }
+
 /* ---------------------------- */
 /* BUTTON */
 /* ---------------------------- */
@@ -418,6 +419,7 @@ hr {
 .container input[type=email],
 .container input[type=password],
 .container input[type=text],
+.container input[type=file],
 .container select{
     width: 100%;
     padding: 15px;
@@ -476,16 +478,3 @@ button {
 
 .sticky .logo {height:50px;}
 
-
-/* TRAVEL MATE */
-/* TRAVEL MATE */
-
-#travelmate
-{background-image: linear-gradient(rgba(0, 0, 0, 0.51),rgba(0, 0, 0, 0.51)),url(img/background1.jpg);
-height:100vh;
-background-size:cover;
-background-position:center;
-background-attachment: fixed;} 
-
-.from-wrapper {background-color: #f6f6f6;
-	background-image: linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));}

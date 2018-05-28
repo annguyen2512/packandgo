@@ -39,7 +39,7 @@ session_start();
 
           e.preventDefault();
 
-          $.ajax({
+        /* $.ajax({
             type: 'post',
             url: '/packandgo/register.php',
             data: $('.register-form').serialize(),
@@ -64,7 +64,7 @@ session_start();
             }
           });
 
-        });
+        });*/
 
         $('.login-form').on('submit', function (e) {
 
@@ -108,7 +108,7 @@ session_start();
             <img src="resource/css/img/logo1.jpg" alt="Pack&gologo" class ="logo">
             <ul class ="main-nav">
                 <li><a href="#">About us</a></li>
-                <li><a href="travelmate.html">Travel mate</a></li>
+                <li><a href="travelmate.php">Travel mate</a></li>
                 <li><a href="#">Our Places</a></li>
                   
                <?php
@@ -160,7 +160,7 @@ session_start();
     </div>
     <div class="col span-1-of-4 box">
          <i class="ion-happy-outline icon-big"></i>
-            <h3>Support service</h3>
+            <h3>Support  service</h3>
             <p>If you have any concern/questions in mind regarding to the trip, the travel mate or places you want to go, our support team is here to help you.
             </p>   
     </div>    
@@ -382,7 +382,7 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
     <div id="register" class="registerform">
 <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close">&times;</span>    
         <!-- <form class="register-form" action="/packandgo/register.php" method="post"> -->
-        <form id ="register-form" class="register-form" action="" method="post">
+        <form id ="register-form" class="register-form" action="register.php" method="post" enctype="multipart/form-data">
  <div class="container">
       <h3>Sign Up</h3>
       <p>Please fill in this form to create an account.</p>
@@ -392,6 +392,8 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
       
       <label for="email"><b>Email</b></label>
       <input type="email" placeholder="Enter Email" name="email" required>
+      <label for="image"><b>Upload the image</b></label>
+       <input type="file" name="image"><br>
       
       <label for="country"><b>Country</b></label>
       <select name="country" id="country">
@@ -654,7 +656,11 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
       
       <label>
         <input type="checkbox" name="showpass" onclick="showPasswordFunction()"><i>Show password</i>
-      </label><br><br>
+      </label>
+    
+     
+     
+     <br><br>
           
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 

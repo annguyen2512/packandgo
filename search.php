@@ -1,14 +1,14 @@
 <?php
 require_once("config.php");
 
-$informationTyped=$_GET["searchtext"];
+$informationTyped=$_GET["search-term"];
 
 
  try{
             //Khởi tạo Prepared Statement từ biến $conn ở phần trước
-            $stmt = $conn->prepare('SELECT email FROM user where name like %:yourName%');
+            $stmt = $conn->prepare('SELECT email FROM user where gender like %:gender%');
          
-            $stmt->execute((array(':yourName'=>$informationTyped)));
+            $stmt->execute((array(':gender'=>$informationTyped)));
                     
             
  }catch(PDOException $ex){
