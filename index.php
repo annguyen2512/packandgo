@@ -39,7 +39,7 @@ session_start();
 
           e.preventDefault();
 
-        /* $.ajax({
+        $.ajax({
             type: 'post',
             url: '/packandgo/register.php',
             data: $('.register-form').serialize(),
@@ -64,7 +64,7 @@ session_start();
             }
           });
 
-        });*/
+        });
 
         $('.login-form').on('submit', function (e) {
 
@@ -382,7 +382,7 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
     <div id="register" class="registerform">
 <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close">&times;</span>    
         <!-- <form class="register-form" action="/packandgo/register.php" method="post"> -->
-        <form id ="register-form" class="register-form" action="register.php" method="post" enctype="multipart/form-data">
+        <form id ="register-form" class="register-form" action="" method="post" enctype="multipart/form-data">
  <div class="container">
       <h3>Sign Up</h3>
       <p>Please fill in this form to create an account.</p>
