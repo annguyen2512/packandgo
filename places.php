@@ -1,7 +1,4 @@
-<?php
-// Start the session
-session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">    
 <head>
@@ -10,12 +7,16 @@ session_start();
     <link rel="stylesheet" type ="text/css" href="vendors/css/ionicons.min.css">
     <link rel="stylesheet" type ="text/css" href="vendors/css/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type ="text/css" href="resource/css/style.css">
-     <meta charset="UTF-8">
-    <title>pack&ampgo</title>
+    <link rel="stylesheet" type ="text/css" href="resource/css/style3.css">
 
-    <script src="resource/js/jquery-1.9.1.js"></script>
-    <script src="resource/js/script.js"></script>
+         <meta charset="UTF-8">
+    <script src="./resource/js/jquery-1.9.1.js"></script>
+    <script src="./resource/js/script.js"></script>
+    <title>travelmate</title>
+
+      <script src="./resource/js/jquery-1.9.1.js"></script>
+    <script src="./resource/js/script.js"></script>
+
     <script>
 
       $(function () {
@@ -107,289 +108,177 @@ session_start();
       });
     </script>
 
- </head>
+    </head>
 <body>
-    <header id="firstpage">
-       <nav>
-        <div class ="row">
-           <a href="index.php"><img src="resource/css/img/logo1.jpg" alt="Pack&gologo" class ="logo"></a>
-            <ul class ="main-nav">
-                <li><a href="#section-features">About us</a></li>
-                <li><a href="travelmate.php">Travel mate</a></li>
-                <li><a href="places.php">Our Places</a></li>
-                  
-               <?php
-               if (isset($_SESSION['email']) && $_SESSION['email'] != '') {
-                  echo "<li><a href='#'>Hello, ".$_SESSION['name']."</a></li>";
-                  echo "<li><a href='./logout.php'>Logout</a></li>"; 
-               }else{
-                  echo "<li><a href='#register' id='click-register'   style='width:auto;'>Sign up</a></li>";         
-                  echo "<li><a id='click-login' href='#login' style='width:auto;'>Login</a></li>";               
-                }
-               
-               ?>
-                      
-               </ul>
-        </div>
-        </nav> 
-        <div class="hero-text-box">
-            <h1>Just pack and go<br> Travel to meet yourself</h1>
-            <a class="btn btn-full" href="places.php">Go now</a>
-            <a class="btn btn-ghost" href="travelmate.php">Find now</a>
-        </div>
-    </header>
-    
-<section class="section-features js--section-features" id="section-features">
-<div class="row">
-    <h2>GO WITH BUDDIES &mdash; TRAVEL HAPPPILY</h2>
-    <p class="long-copy">
-    We are Pack&ampGo service, where you can find a wide variety of different individuals to travel with and many secret wild places to discover. We know you are not alone. Let us take care of your trip. 
-    </p>
-    </div>
-<div class="row">
-    <div class="col span-1-of-4 box">
-             <i class="ion-ios-people icon-big"></i>
-            <h3>Travel mate wanted</h3>
-            <p>We offer you the special algorithm to find and meet someone matching your travel passions and hobbies.
-            </p>   
-    </div>
-    <div class="col span-1-of-4 box">
-         <i class="ion-plane icon-big"></i>
-            <h3>Combined tours</h3>
-            <p>To deliver the amazing trip at resonable service, we can combine you or your family with other groups/persons. If you would like the mutual beauty of different cultures and people, feel fee to book. 
-            </p>   
-    </div>
-    <div class="col span-1-of-4 box">
-        <i class="ion-home icon-big"></i>
-            <h3>Places</h3>
-            <p>Our suggested places are extremely different, local and not crowded like other popular attractions. You will get the unique experience and extraordinary journey during the time being here.
-            </p>   
-    </div>
-    <div class="col span-1-of-4 box">
-         <i class="ion-happy-outline icon-big"></i>
-            <h3>Support  service</h3>
-            <p>If you have any concern/questions in mind regarding to the trip, the travel mate or places you want to go, our support team is here to help you.
-            </p>   
-    </div>    
-    
-</div>    
-</section>
-    
-<section class="section-images">
-    <ul class="travel-showcase clearfix">
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/river.JPG" alt="river">
-             </figure>
-    </li>
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/beach.JPG" alt="beach">
-             </figure>
-    </li>
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/cloud.JPG" alt="cloud">
-             </figure>
-    </li>
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/culture.JPG" alt="culture">
-             </figure>
-    </li>
-    </ul>
-    <ul class="travel-showcase clearfix">
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/food.JPG" alt="food">
-             </figure>
-    </li>
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/mountain.JPG" alt="mountain">
-             </figure>
-    </li> 
-        
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/village.JPG" alt="village">
-             </figure>
-    </li>
-        <li>
-        <figure class="travel-photo">
-        <img src="resource/img/city.JPG" alt="city">
-             </figure>
-    </li>
-    </ul>    
-        
-    </section>
-<section class="section-steps">
-<div class="row">
-    <h2>How to find an ideal travel mate &mdash; Simple as 1,2,3</h2>
-</div>
-<div class="row">
-    <div class="col span 1-of-2 step-box">
-       <img src="resource/img/companion.JPG" class ="companion">  
-    </div>
-          
-    <div class="col span 1-of-2 step-box">
-       <div class="steps">
-           <div><span class="number">1</span> Sign up and tell us something about yourself</div>
-       </div>
-       <div class="steps">
-            <div><span class="number">2</span> Choose your intended destinations </div> 
 
-           <div class="steps">
-                <div><span class="number">3</span> Choose the best suited travel mate</div> 
-           </div>
-           <div class="steps">
-                <div><span class="number">4</span> More convenient on app</div>
-            </div>
-
-            <a href="#" class="btn-app"><img src="resource/img/ios.png" alt="android"></a>
-            <a href="#" class="btn-app"><img src="resource/img/android.png" alt="ios"></a>   
-        </div>
-    </div>  
-</div>
-        
-</section>   
-    
-<section class="section-places" id="section-places">
-    <h2>Hidden GEMs We Discovered </h2>
-<div class="row">
-     
-<div class="col span-1-of-4 box">
-<img src="resource/img/vinhhy.JPG">
-<h3>Vinh Hy bay</h3>
-<i class="ion-home"></i>
-Ninh Thuan province<br>
-<i class="ion-model-s"></i>
-By boat from Cam Ranh pier
-</div>
-<div class="col span-1-of-4 box">
-    <img src="resource/img/phanrang.jpg">
-<h3>Bai Chuoi beach</h3>
-<i class="ion-home"></i>
-Ninh Thuan province
-<br>
-<i class="ion-model-s"></i>
-By boat from Phan Rang city
-</div> 
-<div class="col span-1-of-4 box">
-  <img src="resource/img/phuquy.jpg">
-<h3>Phu Quy island</h3>
-<i class="ion-home"></i>
-Binh Thuan province<br>
-<i class="ion-model-s"></i>
-By boat from Phan Thiet city
-</div> 
-<div class="col span-1-of-4 box">
-    <img src="resource/img/taybac.jpg">
-<h3>Quan Ba</h3>
-<i class="ion-home"></i>
-Lao Cai province<br>
-<i class="ion-model-s"></i>
-By airplane from HCMC
-</div>
-    </div>
-
-</section>
-    
-<section class ="section-testimonials">
-    <div class="row">
-<h2> Customers talked about us</h2>       
-    </div>
-<div class="row"> 
-<Div class="col span-1-of-3">
-    <blockquote>
-I love travelling and Pack & Go gave me an opportunity to share this love with others. People are nice and helpful. Cannot ask for more  <cite><img src="resource/img/customer%201.jpeg">David Sebastian</cite>    
-    </blockquote>  
-    </Div>
-<Div class="col span-1-of-3">
-    <blockquote>
-I was looking for a quiet place where I can feel the nature by myself. And Pack & Go showed me many great options. Phu Quy island is the one. <cite><img src="resource/img/customer%202.jpg">Phuong Dang</cite> 
-    </blockquote>  
-    </Div>
-<Div class="col span-1-of-3">
-    <blockquote>
-I have found the love of my life when being on tour with Pack & Go to Tay Bac. Without them, I am just the loner on the way around the world.<cite><img src="resource/img/customer%203.jpg">Duy Doan</cite>
-    </blockquote>  
-    </Div>
+<header id="places">
+        <nav>
+    <div class ="row">
+    <a href="index.php"><img src="resource/css/img/logo1.jpg" alt="Pack&gologo" class ="logo"></a>
+    <ul class ="main-nav">
+    <li><a href="#">About us</a></li>
+    <li><a href="travelmate.php">Travel mate</a></li>
+    <li><a href="places.php">Our Places</a></li>
    
-   </div>    
-    
-</section>
-    
-<section class="section-form">
-<div class="row">
-    <h2>We're happy to hear from you</h2>
-</div>  
-
-<form id ="contact-form" class="contact-form" action="" method="post">
-     <div class="row">
-        <div class="col span-1-of-3">
-            <label>Name</label>
-        </div>
-        <div class="col span-2-of-3">
-            <input type="text" name="name" id="name" placeholder="Your name" required>
-        </div> 
-    </div> 
-    <div class="row">    
-        <div class="col span-1-of-3">
-            <label>Email</label>
-        </div>
-        <div class="col span-2-of-3">
-            <input type="email" name="email" id="email" placeholder="Your email" required>
-        </div> 
-    </div>
-
-
-    <div class="row">    
-        <div class="col span-1-of-3">
-            <label>How do you know us?</label></div>
-
-        <div class="col span-2-of-3">
-            <select name="find-us" id="find-us">
-               <option value="friends">Friends</option>
-               <option value="search engine" selected>Search engine</option>
-               <option value="advertisement">Advertisement</option>
-               <option value="other websites">Other websites</option>    
-            </select>
-        </div>
-    </div>  
-
-    <div class="row">    
-        <div class="col span-1-of-3">
-         <label>Newsletter</label>
-    </div>
+     <?php
+	   if (isset($_SESSION['email']) && $_SESSION['email'] != '') {
+	      echo "<li><a href='#'>Hello, ".$_SESSION['name']."</a></li>";
+	      echo "<li><a href='./logout.php'>Logout</a></li>"; 
+	   }else{
+	      echo "<li><a href='#register' id='click-register'   style='width:auto;'>Sign up</a></li>";         
+	      echo "<li><a id='click-login' href='#login' style='width:auto;'>Login</a></li>";               
+	   }
+    ?>
+   </ul>  
         
-    <div class="col span-2-of-3">
-        <input type="hidden" name="news" value="0" /> 
-        <input type="checkbox" name="news" id="news" value="1" checked>Yes,please</div>
-    </div>
+            </div></nav></header>
 
-    <div class="row">
-        <div class="col span-1-of-3">
-            <label>Drop us a line</label>
-        </div>
-        <div class="col span-2-of-3">
-            <textarea name="feedback" placeholder="Your message"></textarea>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col span-1-of-3">
-            <label>&nbsp;</label></div>
-        <div class="col span-2-of-3">
-            <input type="submit" value="Send it">
-        </div>
-    </div>       
-</form>
-</section>
-
-<!-- reference: w3 school-->  
+<div class="introduction">
+  <div class="wrapper">
+    <h1>Fabulous Places</h1>
+    <p id="intro">Welcome to our super amazing places. We will take you to somewhere Google cannot search. It is all about discovery, challenges, expenditures which you won't ever forget. BOOK NOW.</p>
+  </div>
+</div>
     
-    <div id="register" class="registerform">
+    
+<div class="flexsearch">
+		<div class="flexsearch--wrapper">
+			<form class="flexsearch--form" action="#" method="post">
+				<div class="flexsearch--input-wrapper">
+					<input class="flexsearch--input" type="search" placeholder="Enter your destination">
+				</div>
+				<input class="flexsearch--submit" type="submit" value="&#10140;"/>
+			</form>
+		</div>
+</div>
+    
+    
+    
+<ul class="products">
+  <li class="product"> 
+    <div class="product__content">
+      <h2>CAVES DISCOVERY</h2>
+      <p class="price">$336.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="336.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>CAU ISLAND</h2>
+      <p class="price">$122.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="122.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>North East Adventure</h2>
+      <p class="price">$511.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="511.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>Cham Island</h2>
+      <p class="price">193.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="193.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>5 Waterfalls in 1 day</h2>
+      <p class="price">$122.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="122.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>Paradise trail in Central mountain</h2>
+      <p class="price">$48.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="48.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>Hiking race</h2>
+      <p class="price">$24.99</p>
+    <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="24.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+  <li class="product"> 
+    <div class="product__content">
+      <h2>Climb the toughest mountain</h2>
+      <p class="price">$69.99</p>
+         <p class="details"><a href="#">More info</a></p>
+      <p>A great description that explains what this product is all about. Here's what you get!</p>
+      <ul class="features">
+        <li>This thing</li>
+        <li>That thing</li>
+        <li>And of course the other thing that's really essential</li>
+      </ul>
+      <button value="69.99">Book Now</button>
+      <div class="icon__check"></div>
+    </div>
+  </li>
+</ul>
+    
+    
+<div id="register" class="registerform">
 <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close">&times;</span>    
         <!-- <form class="register-form" action="/packandgo/register.php" method="post"> -->
         <form id ="register-form" class="register-form" action="" method="post" enctype="multipart/form-data">
@@ -749,6 +638,10 @@ I have found the love of my life when being on tour with Pack & Go to Tay Bac. W
       
       
   }
-</script>
-</body> 
+</script>    
+    
+    </body>
+    
+    
+
 </html>

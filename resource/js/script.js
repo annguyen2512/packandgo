@@ -1,7 +1,6 @@
 $(document).ready(function() {
-    
-    
-    /* For the sticky navigation */
+
+ /* For the sticky navigation */
     $('.js--section-features').waypoint(function(direction) {
         if (direction == "down") {
             $('nav').addClass('sticky');
@@ -11,6 +10,8 @@ $(document).ready(function() {
     }, {
       offset: '60px;'
     });
+
+
 
 // Get the modal
 var modal_register = document.getElementById('click-register');
@@ -60,3 +61,4 @@ window.onclick = function(event) {
     }
 }     
 });
+

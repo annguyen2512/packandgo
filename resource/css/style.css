@@ -52,7 +52,7 @@ section {
 /* HEADING */
 /* ---------------------------- */
 
-h1,h2,h3{
+h1,h2{
 font-weight:600;
 text-transform: uppercase;
 letter-spacing:1px;
@@ -82,6 +82,7 @@ width:100px;
 }
 h3{
     font-size:110%;
+    font-weight:600
     margin-bottom:15px;
 }
 
@@ -164,7 +165,7 @@ background-attachment: fixed;}
 .hero-text-box 
 {position: absolute;
 width:1140px;
-top:30%;
+top:20%;
 left:50%;
 transform: translate(-50%,50%);}
 /*move object leftwards by 50% of my width, along the x-axis, and
@@ -304,6 +305,7 @@ padding-left:3%;
 
 .box img{width:100%;height:230px;}
 
+
 /* ---------------------------- */
 /* TESTIMONIALS
 /* ------------------------------*/
@@ -403,7 +405,7 @@ hr {
 }
 
 /* Clear floats */
-.clearfix::after {
+.clearfix:after {
     content: "";
     clear: both;
     display: table;
